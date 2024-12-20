@@ -16,6 +16,11 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: (args) => <Box {...args}>Defaul box content</Box>,
+  parameters: {
+    controls: {
+      exclude: ['c', 'ff'],
+    },
+  },
 }
 
 export const CustomColor: Story = {

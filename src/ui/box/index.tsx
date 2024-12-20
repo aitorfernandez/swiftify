@@ -7,13 +7,8 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const Box = styled.div<BoxProps>`
-  ${({ c, ff }) => css`
+  ${({ c = 'inherit', ff = 'inherit' }) => css`
     color: ${c};
     font-family: ${ff};
   `}
 `
-
-Box.defaultProps = {
-  c: 'inherit',
-  ff: 'inherit',
-}
