@@ -1,5 +1,7 @@
 import { css, createGlobalStyle } from 'styled-components'
 
+import { theme } from './theme'
+
 export const styles = css`
   *:where(
       :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
@@ -110,4 +112,8 @@ export const styles = css`
 
 export const AppStyle = createGlobalStyle`
   ${styles}
+
+  body {
+    font-family: ${theme.fontFamily.primary};
+  }
 `

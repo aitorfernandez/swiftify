@@ -1,3 +1,21 @@
-type Theme = {}
+function fontStack(fonts: string[]) {
+  return fonts.map((f: string) => (f.includes(' ') ? `"${f}"` : f)).join(', ')
+}
 
-export const theme: Theme = {}
+type FontFamily = {
+  primary: string
+  secondary: string
+}
+
+const fontFamily: FontFamily = {
+  primary: fontStack(['Open Sans', 'sans-serif']),
+  secondary: fontStack(['Roboto', 'sans-serif']),
+}
+
+type Theme = {
+  fontFamily: FontFamily
+}
+
+export const theme: Theme = {
+  fontFamily,
+}
