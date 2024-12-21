@@ -22,8 +22,8 @@ export const Default: Story = {
   render: (args) => <VerticalBarItem {...args} />,
   args: {
     active: false,
-    to: '/user',
     text: 'User',
+    to: '/user',
     iconProps: {
       icon: ['fa', 'user'],
     },

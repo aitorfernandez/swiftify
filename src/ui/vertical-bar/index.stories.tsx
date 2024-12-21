@@ -20,9 +20,11 @@ type Story = StoryObj<typeof meta>
 
 const items: VerticalBarItemPropsWithoutActive[] = [
   {
-    iconProps: { icon: ['fa', 'user'] },
-    text: 'Dashboard',
+    text: 'User',
     to: '/user',
+    iconProps: {
+      icon: ['fa', 'user'],
+    },
   },
 ]
 
