@@ -4,7 +4,8 @@ import { Box, type BoxProps } from '../box'
 import { Link } from '../link'
 import { Icon, type IconProps } from '../icon'
 
-interface VerticalBarItemProps {
+export interface VerticalBarItemProps {
+  active: boolean
   boxProps?: BoxProps
   iconProps: IconProps
   text: string
@@ -12,6 +13,7 @@ interface VerticalBarItemProps {
 }
 
 export function VerticalBarItem({
+  active,
   boxProps,
   iconProps,
   text,

@@ -21,6 +21,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   render: (args) => <VerticalBarItem {...args} />,
   args: {
+    active: false,
     to: '/user',
     text: 'User',
     iconProps: {
