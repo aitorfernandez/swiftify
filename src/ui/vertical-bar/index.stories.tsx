@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { MemoryRouter } from 'react-router-dom'
 
-import { VerticalBar, type VerticalBarItemPropsWithoutActive } from '.'
+import { VerticalBar } from '.'
+import type { VerticalBarItemProps } from '../vertical-bar-item'
 
 const meta = {
   title: 'ui/VerticalBar',
@@ -18,7 +19,7 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const items: VerticalBarItemPropsWithoutActive[] = [
+const items: VerticalBarItemProps[] = [
   {
     text: 'User',
     to: '/user',

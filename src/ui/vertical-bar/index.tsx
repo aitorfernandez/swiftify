@@ -9,13 +9,8 @@ import {
   type VerticalBarItemProps,
 } from '../vertical-bar-item'
 
-export type VerticalBarItemPropsWithoutActive = Omit<
-  VerticalBarItemProps,
-  'active'
->
-
 export interface VerticalBarProps {
-  items: VerticalBarItemPropsWithoutActive[]
+  items: VerticalBarItemProps[]
 }
 
 export function VerticalBar({ items }: VerticalBarProps): JSX.Element {

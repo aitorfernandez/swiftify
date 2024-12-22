@@ -5,7 +5,7 @@ import { Link } from '../link'
 import { Icon, type IconProps } from '../icon'
 
 export interface VerticalBarItemProps {
-  active: boolean
+  active?: boolean
   boxProps?: BoxProps
   iconProps: IconProps
   text: string

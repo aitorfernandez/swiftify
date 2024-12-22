@@ -1,9 +1,14 @@
 import styled, { css } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library, type IconProp } from '@fortawesome/fontawesome-svg-core'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
+import {
+  faUser,
+  faGauge,
+  faDiamondTurnRight,
+  faScroll,
+} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUser)
+library.add(faUser, faGauge, faDiamondTurnRight, faScroll)
 
 export interface IconProps {
   icon: string[]
