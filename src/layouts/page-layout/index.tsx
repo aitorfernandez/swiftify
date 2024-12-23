@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Box } from './ui'
+import { Box } from '../../ui'
 
 interface PageLayoutProps {
   children: React.ReactNode

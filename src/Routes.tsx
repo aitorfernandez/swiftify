@@ -1,6 +1,6 @@
 import { useRoutes } from 'react-router-dom'
 
-import { AppLayout } from './AppLayout'
+import { AppLayout } from './layouts/app-layout'
 
 import { HomePage } from './pages/home-page'
 

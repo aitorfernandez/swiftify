@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
-import { PageLayout } from '../../PageLayout'
 import { Flex, Heading, Card } from '../../ui'
+import { PageLayout } from '../../layouts/page-layout'
+import { Transactions } from '../../components/transactions'
 
 export function HomePage(): JSX.Element {
   return (
@@ -11,7 +12,9 @@ export function HomePage(): JSX.Element {
         <Card>Card1</Card>
         <Card>Card2</Card>
       </Wrapper>
-      <div>Transactions</div>
+      <div>
+        <Transactions />
+      </div>
     </PageLayout>
   )
 }

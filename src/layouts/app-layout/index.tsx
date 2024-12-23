@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom'
 import { ThemeProvider, styled } from 'styled-components'
 
-import { AppStyle } from './AppStyle'
-import { theme } from './theme'
-import { Header } from './components/header'
-import { Box, Flex, VerticalBar, type VerticalBarItemProps } from './ui'
+import { AppStyle } from '../../AppStyle'
+import { theme } from '../../theme'
+import { Header } from '../../components/header'
+import { Box, Flex, VerticalBar, type VerticalBarItemProps } from '../../ui'
 
 export function AppLayout(): JSX.Element {
   const items: VerticalBarItemProps[] = [
