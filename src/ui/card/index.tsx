@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { Flex } from '../flex'
+import { theme } from '../../theme'
 
 export interface CardProps {
   bg?: string
@@ -8,10 +9,11 @@ export interface CardProps {
 }
 
 export const Card = styled(Flex)<CardProps>`
-  ${({ bg = 'none', radii = '0' }) => css`
+  ${({ bg = theme.color.background[1], radii = theme.radii[2] }) => css`
     align-items: flex-start;
     background: ${bg};
     border-radius: ${radii};
     flex-direction: column;
+    padding: 24px;
   `}
 `

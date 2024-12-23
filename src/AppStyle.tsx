@@ -114,6 +114,8 @@ export const AppStyle = createGlobalStyle`
   ${styles}
 
   body {
+    background: ${theme.color.background[0]};
+    color: ${theme.color.white[3]};
     font-family: ${theme.fontFamily.primary};
   }
 `

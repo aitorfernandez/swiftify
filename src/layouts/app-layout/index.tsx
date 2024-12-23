@@ -2,15 +2,18 @@ import { Outlet } from 'react-router-dom'
 import { ThemeProvider, styled } from 'styled-components'
 
 import { AppStyle } from '../../AppStyle'
-import { theme } from '../../theme'
-import { Header } from '../../components/header'
 import { Box, Flex, VerticalBar, type VerticalBarItemProps } from '../../ui'
+import { Header } from '../../components/header'
+import { UserSettings } from '../../components/user-settings'
+
+import { theme } from '../../theme'
 
 export function AppLayout(): JSX.Element {
   const items: VerticalBarItemProps[] = [
     {
       iconProps: {
         icon: ['fa', 'gauge'],
+        c: theme.color.primary[0],
       },
       text: 'dashboard',
       to: '/',
@@ -18,16 +21,18 @@ export function AppLayout(): JSX.Element {
     {
       iconProps: {
         icon: ['fa', 'diamond-turn-right'],
+        c: theme.color.primary[0],
       },
       text: 'swap',
-      to: '/',
+      to: '/swap',
     },
     {
       iconProps: {
         icon: ['fa', 'scroll'],
+        c: theme.color.primary[0],
       },
       text: 'transactions',
-      to: '/',
+      to: '/transactions',
     },
   ]
 
@@ -46,7 +51,9 @@ export function AppLayout(): JSX.Element {
                   <VerticalBar {...{ items }} />
                 </Nav>
               </Middle>
-              <Bottom>User</Bottom>
+              <Bottom>
+                <UserSettings />
+              </Bottom>
             </Elements>
           </SidebarWrapper>
           <Main>
@@ -60,19 +67,22 @@ export function AppLayout(): JSX.Element {
 
 const Wrapper = styled(Box)`
   height: 100%;
-  max-width: 1440px;
+  margin: 0 auto;
+  max-width: 960px;
   position: relative;
 `
 
 const Inner = styled(Flex)`
   flex: 1 1 0%;
   height: 100%;
+  padding: 12px 0;
   position: relative;
 `
 
 const SidebarWrapper = styled.div`
   flex: none;
   position: relative;
+  margin: 0 24px;
 `
 
 const Elements = styled(Flex)`

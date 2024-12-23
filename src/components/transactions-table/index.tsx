@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { theme } from '../../theme'
 import { TransactionsItem } from '../transactions-item'
 import type { OnRampTransaction } from '../transactions'
 
@@ -12,28 +13,50 @@ export function TransactionsTable({
 }: TransactionsTableProps): JSX.Element {
   return (
     <Wrapper>
-      <table>
+      <StyledTable>
         <thead>
           <tr>
-            <th>type</th>
-            <th>amount</th>
-            <th>status</th>
-            <th>date</th>
+            <TableHeader>Type</TableHeader>
+            <TableHeader>Amount</TableHeader>
+            <TableHeader>Status</TableHeader>
+            <TableHeader>Date</TableHeader>
           </tr>
         </thead>
         <tbody>
           {transactions.map(({ id, ...tx }) => (
-            <tr key={id}>
+            <TableRow key={id}>
               <TransactionsItem {...tx} />
-            </tr>
+            </TableRow>
           ))}
         </tbody>
-      </table>
+      </StyledTable>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
+  border-radius: 8px;
+  margin-top: 12px;
+`
+
+const StyledTable = styled.table`
+  width: 100%;
+  border-spacing: 0;
+`
+
+const TableHeader = styled.th`
+  border-bottom: 1px solid ${theme.color.white[0]};
+  color: ${theme.color.white[1]};
+  font-size: ${theme.fontSize[2]};
+  font-weight: ${theme.fontWeight.bold};
+  padding: 12px 0;
+  text-transform: capitalize;
+`
+
+const TableRow = styled.tr`
+  &:not(:last-child) {
+    border-bottom: 1px solid ${theme.color.white[0]};
+  }
 `
