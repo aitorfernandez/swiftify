@@ -1,4 +1,5 @@
 export * from './box'
+export * from './card'
 export * from './flex'
 export * from './heading'
 export * from './icon'
