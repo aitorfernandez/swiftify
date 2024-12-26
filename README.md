@@ -46,7 +46,7 @@ npm run storybook
 
 # Screenshots
 
-Below is a preview of some components from the homepage:
+Below is a preview of some components from the dashboard-page:
 
 <p align="center">
   <img src="screenshots/dashboard.png" alt="Dashboard" width="96%"/>
